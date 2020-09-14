@@ -22,7 +22,7 @@ def generaVerificador(digitosRut):
     rutPonderado = [a*b for a,b in zip(digitosRut,pondera)] #pondera uno a uno los digitos por el array de ponderación
     
     suma = sum(rutPonderado)
-    digitoVerificador = suma % 11
+    digitoVerificador = 11 - (suma % 11)  # Fórmula correcta para cálculo de verificador
     
     return digitoVerificador
 
