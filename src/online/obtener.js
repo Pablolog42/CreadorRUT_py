@@ -1,7 +1,7 @@
-const rutificador = require('rutificador')
- 
-rutificador({ name: 'Juán Perez' }).then(juanitos => {
+// Packages
+const rutify = require('rutificador')
+
+// Search by name
+rutify({ name: 'Juán Perez' }).then(juanitos => {
   console.log(juanitos)
-}).catch(err => {
-  // Do something
 })
