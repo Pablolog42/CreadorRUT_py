@@ -1,7 +1,9 @@
-// Packages
-const rutify = require('rutificador')
+const infoRut = require('info-rut')
 
-// Search by name
-rutify({ name: 'Juán Perez' }).then(juanitos => {
-  console.log(juanitos)
-})
+const rut = '9.695.669-k'
+infoRut.getPersonByRut(rut).then(console.log).catch(console.error)
+
+
+
+//const name = 'pablo leonardo gonzalez aguilera'
+//infoRut.getPersonByName(name).then(console.log).catch(console.error)
