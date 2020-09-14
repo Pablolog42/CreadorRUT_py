@@ -1,9 +1,8 @@
 import random
 
-
+pondera = [3, 2, 7, 6, 5, 4, 3, 2]
 
 def generaDigitosRut():
-
     digitosRut = [random.randint(0,9) for i in range(7)]  # Crea Array con numeros aleatorios 
          
     digitosRut[0] = random.randint(0,2)     # Solo puedo partir con 0, 1 o 2
@@ -18,5 +17,12 @@ def generaDigitosRut():
     return digitosRut
 
 
+# Retorna digitos entre 0 y 10
+def generaVerificador(digitosRut):
+    rutPonderado = [a*b for a,b in zip(digitosRut,pondera)] #pondera uno a uno los digitos por el array de ponderación
+    
+    suma = sum(rutPonderado)
+    digitoVerificador = suma % 11
+    
+    return digitoVerificador
 
-#def generaVerificador:
